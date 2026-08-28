@@ -15,7 +15,7 @@ Google Sites does not import a custom HTML/CSS website as a full editable site, 
 Site name: `Yanchen Sun`
 
 Page type: Multi-page personal website with top navigation. Use one page each
-for About, News, Research, Publications, Service,
+for Home, News, Research, Publications,
 and Contact.
 
 Theme:
@@ -80,11 +80,10 @@ Theme:
 Use separate top navigation pages to match the draft:
 
 - Home
-- About
+- Home
 - News
 - Research
 - Publications
-- Service
 - Contact
 
 Put publications, presentations, talks, awards, and other updates together on the News page as one reverse-chronological feed.

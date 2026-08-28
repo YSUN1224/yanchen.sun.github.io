@@ -29,11 +29,10 @@ Buttons:
 
 Recommended navigation:
 
-- About
+- Home
 - News
 - Research
 - Publications
-- Service
 - Contact
 
 ## About
