@@ -88,12 +88,12 @@
       }
 
       .hero-inner {
-        width: min(1400px, calc(100% - 40px));
+        width: min(1500px, calc(100% - 48px));
         margin: 0 auto;
         padding: 88px 0 74px;
         display: grid;
         grid-template-columns: 240px minmax(0, 1fr);
-        gap: 96px;
+        gap: 112px;
         align-items: start;
       }
 
@@ -113,17 +113,18 @@
 
       .hero-copy {
         min-width: 0;
-        padding-top: 2px;
+        padding-top: 0;
       }
 
       .eyebrow {
         margin: 0 0 10px;
         color: var(--ink);
-        font-size: 24px;
+        font-size: clamp(20px, 1.55vw, 23px);
         font-weight: 700;
-        letter-spacing: 0.08em;
-        line-height: 1.28;
+        letter-spacing: 0.045em;
+        line-height: 1.08;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
       h1 {
@@ -258,6 +259,7 @@
 
         .eyebrow {
           font-size: 18px;
+          white-space: normal;
         }
 
         section {

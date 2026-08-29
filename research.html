@@ -188,6 +188,10 @@
         line-height: 1.55;
       }
 
+      .lead + .lead {
+        margin-top: 22px;
+      }
+
       .meta {
         margin-top: 14px;
         color: var(--muted);
@@ -322,33 +326,65 @@
         height: auto;
       }
 
-      .research-focus-list {
+      .research-pillars {
         display: grid;
         grid-template-columns: 1fr;
         gap: 0;
-        margin-top: 44px;
+        margin-top: 46px;
         border-top: 1px solid var(--line);
       }
 
-      .research-focus-list .card {
-        min-height: 0;
-        padding: 30px 0;
-        border: 0;
+      .research-pillar {
         border-bottom: 1px solid var(--line);
-        border-radius: 0;
         background: var(--white);
       }
 
-      .research-focus-list .tag {
-        margin-bottom: 14px;
+      .research-pillar summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 30px 0;
+        color: var(--ink);
+        cursor: pointer;
+        font-size: clamp(22px, 3vw, 32px);
+        font-weight: 700;
+        line-height: 1.2;
+        list-style: none;
       }
 
-      .research-focus-list h3 {
-        max-width: 720px;
+      .research-pillar summary::-webkit-details-marker {
+        display: none;
       }
 
-      .research-focus-list p {
-        max-width: 820px;
+      .research-pillar summary::after {
+        content: "+";
+        flex: 0 0 auto;
+        width: 34px;
+        height: 34px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--sea);
+        border-radius: 50%;
+        color: var(--sea);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .research-pillar[open] summary::after {
+        content: "−";
+        background: var(--sea);
+        color: var(--white);
+      }
+
+      .research-pillar p {
+        max-width: 900px;
+        margin: -8px 0 30px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.65;
       }
 
       @media (max-width: 820px) {
@@ -587,8 +623,15 @@
                 environmental persistence and biological interactions, while
                 extending these principles to controlled waste transformation
                 and resource cycling.
-                <p style="margin-top: 24px;">
-                Current and future research spans aquatic plastic pollution, contaminants of emerging concern, microbial biogeochemistry, quantitative methods and instrumentation, and sustainable waste-to-resource technologies. Together, these efforts connect fundamental understanding of environmental transformations with the development of quantitative tools and sustainable solutions.
+              </p>
+              <p class="lead">
+                Current and future research spans aquatic plastic pollution,
+                contaminants of emerging concern, microbial biogeochemistry,
+                quantitative methods and instrumentation, and sustainable
+                waste-to-resource technologies. Together, these efforts connect
+                fundamental understanding of environmental transformations with
+                the development of quantitative tools and sustainable
+                solutions.
               </p>
             </div>
           </div>
@@ -597,60 +640,51 @@
             <img src="assets/research-overview-diagram.png" alt="Overview diagram connecting chemical and microbial transformations in environmental systems with fate, impacts, methods, and waste valorization" />
           </figure>
 
-          <div class="research-focus-list" aria-label="Research themes">
-            <article class="card">
-              <h3>Fate, Transformation, and Persistence</h3>
+          <div class="research-pillars" aria-label="Research pillars">
+            <details class="research-pillar">
+              <summary>Fate, Transformation, and Persistence</summary>
               <p>
-                What determines whether an anthropogenic chemical or material
-                persists for days, years, or decades in the environment? This
-                research resolves the <strong>chemical, photochemical,
-                physical, and microbial mechanisms</strong> that govern
-                transformation pathways and rates. Particular emphasis is placed
-                on how environmental conditions and material properties
-                interact with microbial activity to control
-                <strong>degradation, transformation products, and environmental
-                lifetimes</strong>.
+                Anthropogenic chemicals and materials undergo chemical,
+                photochemical, physical, and microbial transformations that
+                determine their persistence in the environment. <strong>We
+                investigate the mechanisms and environmental factors controlling
+                these processes, with a particular focus on plastics,
+                plastic-associated chemicals, and contaminants of emerging
+                concern.</strong>
               </p>
-            </article>
-            <article class="card">
-              <h3>Environmental Impacts</h3>
+            </details>
+            <details class="research-pillar">
+              <summary>Environmental Impacts</summary>
               <p>
-                Environmental transformation can fundamentally change the
-                behavior and consequences of a contaminant or material. This
-                research connects <strong>fate and transformation pathways to
-                bioavailability, biological responses, and ecological effects</strong>, with the goal of
-                determining when environmental transformation attenuates,
-                preserves, or enhances impacts.
+                Environmental transformation can alter the bioavailability and
+                biological effects of chemicals and materials. <strong>We
+                investigate how transformed materials and their products,
+                particularly those derived from plastics, influence microbial
+                communities, biogeochemical cycling, and ecological
+                responses.</strong>
               </p>
-            </article>
-            <article class="card">
-              <h3>Quantitative Methods and Instrumentation</h3>
+            </details>
+            <details class="research-pillar">
+              <summary>Quantitative Methods and Instrumentation</summary>
               <p>
-                Understanding environmental transformations requires
-                measurements that bridge controlled experiments and
-                environmentally relevant conditions. I develop and apply
-                <strong>experimental platforms, analytical approaches, and
-                quantitative frameworks</strong> to resolve biodegradation
-                kinetics, respiration, carbon conversion, transformation rates,
-                and biological responses. These measurements provide the
-                mechanistic and quantitative basis for <strong>predicting
-                environmental persistence and transformation</strong>.
+                Quantifying plastic degradation requires robust methods across
+                material sizes and environmentally relevant conditions.
+                <strong>We develop experimental platforms, analytical methods,
+                and quantitative frameworks to measure and characterize the
+                degradation and transformation of macro- and microplastics.</strong>
               </p>
-            </article>
-            <article class="card">
-              <h3>Waste Valorization and Circularity</h3>
+            </details>
+            <details class="research-pillar">
+              <summary>Waste Valorization and Circularity</summary>
               <p>
-                The same chemical and microbial processes responsible for
-                environmental degradation can be investigated under controlled
-                conditions to understand <strong>carbon conversion and resource
-                recovery from waste streams</strong>. This research focuses on
-                the pathways, microbial functions, and process conditions
-                governing the conversion of waste-derived carbon into
-                <strong>value-added chemicals, materials, and energy</strong>,
-                connecting environmental transformation science with circular
-                carbon utilization.
+                Chemical and microbial transformation processes can also be
+                harnessed to recover value from waste. <strong>We investigate
+                controlled biological processes for converting plastic and other
+                waste-derived carbon into value-added chemicals, materials, and
+                energy, connecting environmental transformation science with
+                circular resource utilization.</strong>
               </p>
-            </article>
+            </details>
           </div>
         </div>
       </section>
